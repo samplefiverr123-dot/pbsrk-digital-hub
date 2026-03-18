@@ -18,9 +18,20 @@ export const HeroSection = () => {
 
       <div className="relative z-10 max-w-5xl mx-auto text-center space-y-8">
         {/* Avatar */}
-        <div className="mx-auto w-28 h-28 rounded-full bg-gradient-to-br from-primary to-accent p-[3px] animate-float">
-          <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
-            <span className="font-display font-black text-3xl text-gradient">PB</span>
+        <div className="relative mx-auto w-36 h-36">
+          {/* Outer spinning ring */}
+          <div className="absolute inset-[-18px] rounded-full border-2 border-transparent border-t-primary border-b-accent animate-[spin_4s_linear_infinite] opacity-60" />
+          {/* Middle pulsing glow */}
+          <div className="absolute inset-[-12px] rounded-full bg-gradient-to-tr from-primary/30 via-transparent to-accent/30 animate-[spin_6s_linear_infinite_reverse] blur-md" />
+          {/* Inner reverse spinning ring */}
+          <div className="absolute inset-[-6px] rounded-full border border-transparent border-l-accent border-r-primary animate-[spin_3s_linear_infinite_reverse] opacity-50" />
+          {/* Radiating pulse */}
+          <div className="absolute inset-[-24px] rounded-full bg-primary/10 animate-[ping_2.5s_cubic-bezier(0,0,0.2,1)_infinite]" />
+          {/* Core avatar */}
+          <div className="relative w-full h-full rounded-full bg-gradient-to-br from-primary to-accent p-[3px] animate-float z-10">
+            <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
+              <span className="font-display font-black text-4xl text-gradient">PB</span>
+            </div>
           </div>
         </div>
 
