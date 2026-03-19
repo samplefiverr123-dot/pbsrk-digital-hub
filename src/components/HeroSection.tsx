@@ -43,16 +43,17 @@ export const HeroSection = () => {
 
         {/* Headline */}
         <h1 className="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight">
-          <span className="text-gradient">PBSRK</span>
+          <span className="text-foreground">Latest World Tech &</span>
           <br />
-          <span className="text-foreground">AI Creations That</span>
+          <span className="text-gradient">Innovations</span>
+          <span className="text-foreground"> | Real-Time</span>
           <br />
-          <span className="text-foreground">Actually </span>
-          <span className="text-primary">Deliver</span>
+          <span className="text-foreground">AI, Gadgets & </span>
+          <span className="text-primary">Future Tech</span>
         </h1>
 
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-          Digital Hustler from Yanam — turning wild ideas into clean digital experiences with smart AI tools. Speed, results, and real value for every client.
+          Curated technical breakdowns of breakthroughs happening right now.
         </p>
 
         {/* Stats */}
