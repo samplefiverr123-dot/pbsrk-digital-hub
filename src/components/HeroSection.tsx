@@ -1,16 +1,16 @@
 import { MessageCircle, Zap, Users, FolderOpen } from "lucide-react";
 
 const stats = [
-  { icon: FolderOpen, label: "Projects", value: "20+" },
-  { icon: Users, label: "Happy Clients", value: "20+" },
-  { icon: Zap, label: "AI Tools Mastered", value: "10+" },
-];
+{ icon: FolderOpen, label: "Projects", value: "20+" },
+{ icon: Users, label: "Happy Clients", value: "20+" },
+{ icon: Zap, label: "AI Tools Mastered", value: "10+" }];
+
 
 export const HeroSection = () => {
   const whatsappUrl = "https://wa.me/918185967282?text=Hey%20PBSRK!%20I%27d%20like%20to%20discuss%20a%20project.";
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-4">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden px-4 bg-neutral-950 rounded-none shadow-none">
       {/* Gradient orbs */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/15 rounded-full blur-[150px] pointer-events-none" />
@@ -57,13 +57,13 @@ export const HeroSection = () => {
 
         {/* Stats */}
         <div className="flex justify-center gap-8 flex-wrap">
-          {stats.map(({ icon: Icon, label, value }) => (
-            <div key={label} className="text-center">
+          {stats.map(({ icon: Icon, label, value }) =>
+          <div key={label} className="text-center">
               <Icon className="w-5 h-5 text-primary mx-auto mb-1" />
               <div className="font-mono font-bold text-2xl text-foreground">{value}</div>
               <div className="text-xs text-muted-foreground">{label}</div>
             </div>
-          ))}
+          )}
         </div>
 
         {/* CTA */}
@@ -72,19 +72,19 @@ export const HeroSection = () => {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-bold text-lg glow-cyan-strong hover:scale-105 transition-all duration-300"
-          >
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-bold text-lg glow-cyan-strong hover:scale-105 transition-all duration-300">
+            
             <MessageCircle className="w-5 h-5" />
             Hire Me Now — Free Chat
           </a>
           <a
             href="#portfolio"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl glass text-foreground font-semibold hover:glow-cyan transition-all duration-300"
-          >
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl glass text-foreground font-semibold hover:glow-cyan transition-all duration-300">
+            
             View My Work
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
