@@ -11,21 +11,22 @@ import { PricingSection } from "@/components/PricingSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ScrollReveal } from "@/components/ScrollReveal";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
     <StatusTicker />
     <Navbar />
     <HeroSection />
-    <AboutSection />
-    <ServicesSection />
-    <SkillsSection />
-    <EducationSection />
-    <PortfolioSection />
-    <TestimonialsSection />
-    <PricingSection />
-    <ContactSection />
-    <Footer />
+    <ScrollReveal><AboutSection /></ScrollReveal>
+    <ScrollReveal><ServicesSection /></ScrollReveal>
+    <ScrollReveal><SkillsSection /></ScrollReveal>
+    <ScrollReveal><EducationSection /></ScrollReveal>
+    <ScrollReveal><PortfolioSection /></ScrollReveal>
+    <ScrollReveal><TestimonialsSection /></ScrollReveal>
+    <ScrollReveal><PricingSection /></ScrollReveal>
+    <ScrollReveal><ContactSection /></ScrollReveal>
+    <ScrollReveal><Footer /></ScrollReveal>
     <WhatsAppButton />
   </div>
 );
