@@ -9,6 +9,7 @@ import { PortfolioSection } from "@/components/PortfolioSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { PricingSection } from "@/components/PricingSection";
 import { ContactSection } from "@/components/ContactSection";
+import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ScrollReveal } from "@/components/ScrollReveal";
@@ -25,6 +26,7 @@ const Index = () => (
     <ScrollReveal><PortfolioSection /></ScrollReveal>
     <ScrollReveal><TestimonialsSection /></ScrollReveal>
     <ScrollReveal><PricingSection /></ScrollReveal>
+    <ScrollReveal><FAQSection /></ScrollReveal>
     <ScrollReveal><ContactSection /></ScrollReveal>
     <ScrollReveal><Footer /></ScrollReveal>
     <WhatsAppButton />
