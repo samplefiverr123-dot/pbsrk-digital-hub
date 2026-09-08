@@ -31,7 +31,12 @@ export const Navbar = () => {
 
           <div className="md:hidden flex items-center gap-2">
             <ThemeToggle />
-            <button onClick={() => setOpen(!open)} className="p-2 text-foreground">
+            <button
+              onClick={() => setOpen(!open)}
+              className="p-2 text-foreground"
+              aria-label={open ? "Close menu" : "Open menu"}
+              aria-expanded={open}
+            >
               {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>

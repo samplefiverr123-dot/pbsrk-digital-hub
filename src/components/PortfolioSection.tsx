@@ -88,6 +88,7 @@ export const PortfolioSection = () => (
                     href={p.link}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Open ${p.title} project demo`}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
