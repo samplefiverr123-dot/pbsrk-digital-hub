@@ -28,7 +28,9 @@ export const ContactSection = () => {
           <form onSubmit={handleSubmit} className="glass rounded-2xl p-6 space-y-4">
             <input
               type="text"
+              id="contact-name"
               placeholder="Your Name"
+              aria-label="Your Name"
               required
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -36,14 +38,18 @@ export const ContactSection = () => {
             />
             <input
               type="email"
+              id="contact-email"
               placeholder="Your Email"
+              aria-label="Your Email"
               required
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
               className="w-full bg-transparent border-b border-border pb-3 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none transition-colors"
             />
             <textarea
+              id="contact-message"
               placeholder="Your Message"
+              aria-label="Your Message"
               required
               rows={4}
               value={form.message}
