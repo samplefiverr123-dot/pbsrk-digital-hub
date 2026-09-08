@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { StatusTicker } from "@/components/StatusTicker";
 import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/HeroSection";
@@ -16,6 +17,9 @@ import { ScrollReveal } from "@/components/ScrollReveal";
 
 const Index = () => (
   <div className="min-h-screen bg-background">
+    <Helmet>
+      <link rel="canonical" href="https://hustlebharat.lovable.app/" />
+    </Helmet>
     <StatusTicker />
     <Navbar />
     <HeroSection />

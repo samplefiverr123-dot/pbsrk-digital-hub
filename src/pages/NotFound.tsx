@@ -14,6 +14,7 @@ const NotFound = () => {
       <Helmet>
         <title>Page Not Found | PBSRK</title>
         <meta name="description" content="The page you are looking for doesn't exist. Head back to PBSRK's homepage for AI-powered websites, apps, ads, and automation." />
+        <link rel="canonical" href={`https://hustlebharat.lovable.app${location.pathname}`} />
         <meta property="og:title" content="Page Not Found | PBSRK" />
         <meta property="og:description" content="The page you are looking for doesn't exist. Head back to PBSRK's homepage for AI-powered websites, apps, ads, and automation." />
         <meta property="og:type" content="website" />
