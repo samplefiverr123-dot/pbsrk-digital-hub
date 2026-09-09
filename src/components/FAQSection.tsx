@@ -1,33 +1,10 @@
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import { ScrollReveal } from "@/components/ScrollReveal";
+import { faqArticles } from "@/data/faqArticles";
 
-export const faqs = [
-  {
-    q: "What services do you offer as an AI freelancer?",
-    a: "I build high-converting websites, AI chatbots, branding & graphics, Meta ad campaigns, custom productivity tools, and complete digital growth packages — all powered by smart AI workflows.",
-  },
-  {
-    q: "How long does a typical project take?",
-    a: "Most starter projects ship in 3 days, growth packages in 7 days, and premium full-stack builds in 14 days. I always confirm a clear timeline before starting.",
-  },
-  {
-    q: "Do you work with international clients or only India?",
-    a: "I'm based in Yanam, India, but I work with clients worldwide. Payments can be made in INR or USD via UPI, bank transfer, or international gateways.",
-  },
-  {
-    q: "What makes you different from other freelancers?",
-    a: "I combine youth-driven speed with AI-powered efficiency — delivering agency-quality work at freelancer rates, with real measurable results (sales boosts, lead growth, ROAS) for every client.",
-  },
-  {
-    q: "Do you offer revisions and post-delivery support?",
-    a: "Yes — every plan includes revisions (2 to unlimited based on tier) and 1–3 months of priority support after delivery to make sure everything runs perfectly.",
-  },
-  {
-    q: "How do I get started?",
-    a: "Just hit the WhatsApp button or fill out the contact form. We'll have a free chat about your goals, pick the right package, and I'll get to work right away.",
-  },
-];
+export const faqs = faqArticles.map((a) => ({ q: a.question, a: a.answer, slug: a.slug }));
 
 export const FAQSection = () => {
   const [open, setOpen] = useState<number | null>(0);
@@ -49,12 +26,14 @@ export const FAQSection = () => {
                 <button
                   onClick={() => setOpen(open === i ? null : i)}
                   className="w-full flex items-center justify-between gap-4 p-5 text-left"
+                  aria-expanded={open === i}
                 >
                   <span className="font-display font-semibold text-foreground">{f.q}</span>
                   <ChevronDown
                     className={`w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300 ${
                       open === i ? "rotate-180" : ""
                     }`}
+                    aria-hidden="true"
                   />
                 </button>
                 <div
@@ -63,12 +42,31 @@ export const FAQSection = () => {
                   }`}
                 >
                   <div className="overflow-hidden">
-                    <p className="px-5 pb-5 text-muted-foreground leading-relaxed">{f.a}</p>
+                    <div className="px-5 pb-5">
+                      <p className="text-muted-foreground leading-relaxed">{f.a}</p>
+                      <Link
+                        to={`/answers/${f.slug}`}
+                        className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-primary hover:gap-3 transition-all duration-300"
+                      >
+                        Read the full answer
+                        <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
             </ScrollReveal>
           ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <Link
+            to="/answers"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg glass font-semibold text-foreground hover:glow-cyan transition-all duration-300"
+          >
+            Browse all answers
+            <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
         </div>
       </div>
     </section>
