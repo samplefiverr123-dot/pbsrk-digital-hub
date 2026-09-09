@@ -9,8 +9,23 @@ interface SitemapEntry {
   priority?: string;
 }
 
+const answerSlugs = [
+  "ai-freelancer-services",
+  "project-timelines",
+  "international-clients",
+  "why-choose-me",
+  "revisions-and-support",
+  "how-to-get-started",
+];
+
 const entries: SitemapEntry[] = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
+  { path: "/answers", changefreq: "monthly", priority: "0.8" },
+  ...answerSlugs.map((slug) => ({
+    path: `/answers/${slug}`,
+    changefreq: "monthly" as const,
+    priority: "0.7",
+  })),
 ];
 
 function generateSitemap(entries: SitemapEntry[]): string {
