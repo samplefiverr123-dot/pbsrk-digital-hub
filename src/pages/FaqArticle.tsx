@@ -63,6 +63,8 @@ const FaqArticle = () => {
         <meta property="og:url" content={url} />
         <meta name="twitter:title" content={article.title} />
         <meta name="twitter:description" content={article.description} />
+        <meta property="og:image" content={`${SITE}${article.cover}`} />
+        <meta name="twitter:image" content={`${SITE}${article.cover}`} />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
@@ -83,6 +85,13 @@ const FaqArticle = () => {
             {article.question}
           </h1>
           <p className="mt-6 text-lg text-muted-foreground leading-relaxed">{article.intro}</p>
+          <img
+            src={article.cover}
+            alt={article.coverAlt}
+            width={1200}
+            height={630}
+            className="mt-8 w-full rounded-xl aspect-[1200/630] object-cover"
+          />
         </header>
 
         <div className="glass rounded-xl p-6 mb-12 border-l-2 border-primary">

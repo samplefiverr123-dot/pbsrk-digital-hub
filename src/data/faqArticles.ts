@@ -1,5 +1,14 @@
+import coverServices from "@/assets/blog-services.jpg";
+import coverTimelines from "@/assets/blog-timelines.jpg";
+import coverInternational from "@/assets/blog-international.jpg";
+import coverWhyChoose from "@/assets/blog-why-choose.jpg";
+import coverSupport from "@/assets/blog-support.jpg";
+import coverGetStarted from "@/assets/blog-get-started.jpg";
+
 export interface FaqArticle {
   slug: string;
+  cover: string;
+  coverAlt: string;
   question: string;
   answer: string;
   title: string;
@@ -13,6 +22,8 @@ export interface FaqArticle {
 export const faqArticles: FaqArticle[] = [
   {
     slug: "ai-freelancer-services",
+    cover: coverServices,
+    coverAlt: "Neon glass cards representing freelance web, chatbot and ads services",
     question: "What services do you offer as an AI freelancer?",
     answer:
       "I build high-converting websites, AI chatbots, branding & graphics, Meta ad campaigns, custom productivity tools, and complete digital growth packages — all powered by smart AI workflows.",
@@ -58,6 +69,8 @@ export const faqArticles: FaqArticle[] = [
   },
   {
     slug: "project-timelines",
+    cover: coverTimelines,
+    coverAlt: "Glowing neon calendar blocks representing project delivery timelines",
     question: "How long does a typical project take?",
     answer:
       "Most starter projects ship in 3 days, growth packages in 7 days, and premium full-stack builds in 14 days. I always confirm a clear timeline before starting.",
@@ -101,6 +114,8 @@ export const faqArticles: FaqArticle[] = [
   },
   {
     slug: "international-clients",
+    cover: coverInternational,
+    coverAlt: "Neon globe with currency symbols representing international clients",
     question: "Do you work with international clients or only India?",
     answer:
       "I'm based in Yanam, India, but I work with clients worldwide. Payments can be made in INR or USD via UPI, bank transfer, or international gateways.",
@@ -139,6 +154,8 @@ export const faqArticles: FaqArticle[] = [
   },
   {
     slug: "why-choose-me",
+    cover: coverWhyChoose,
+    coverAlt: "Single neon figure beside a rising growth chart",
     question: "What makes you different from other freelancers?",
     answer:
       "I combine youth-driven speed with AI-powered efficiency — delivering agency-quality work at freelancer rates, with real measurable results (sales boosts, lead growth, ROAS) for every client.",
@@ -182,6 +199,8 @@ export const faqArticles: FaqArticle[] = [
   },
   {
     slug: "revisions-and-support",
+    cover: coverSupport,
+    coverAlt: "Neon shield with checkmark representing revisions and support",
     question: "Do you offer revisions and post-delivery support?",
     answer:
       "Yes — every plan includes revisions (2 to unlimited based on tier) and 1–3 months of priority support after delivery to make sure everything runs perfectly.",
@@ -220,6 +239,8 @@ export const faqArticles: FaqArticle[] = [
   },
   {
     slug: "how-to-get-started",
+    cover: coverGetStarted,
+    coverAlt: "Neon steps leading to a launching rocket",
     question: "How do I get started?",
     answer:
       "Just hit the WhatsApp button or fill out the contact form. We'll have a free chat about your goals, pick the right package, and I'll get to work right away.",

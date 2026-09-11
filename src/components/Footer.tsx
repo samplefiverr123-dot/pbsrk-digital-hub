@@ -11,7 +11,10 @@ export const Footer = () => (
         <p className="text-xs text-muted-foreground mt-1">AI Freelancer • Yanam, India</p>
       </div>
 
-      <div className="flex gap-6">
+      <div className="flex flex-wrap justify-center gap-6">
+        <a href="/blog" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+          Blog
+        </a>
         {links.map((l) => (
           <a
             key={l}

@@ -20,6 +20,7 @@ const answerSlugs = [
 
 const entries: SitemapEntry[] = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
+  { path: "/blog", changefreq: "weekly", priority: "0.9" },
   { path: "/answers", changefreq: "monthly", priority: "0.8" },
   ...answerSlugs.map((slug) => ({
     path: `/answers/${slug}`,
