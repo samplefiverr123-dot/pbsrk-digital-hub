@@ -17,6 +17,12 @@ export const Navbar = () => {
           </a>
 
           <div className="hidden md:flex items-center gap-6">
+            <a
+              href="/blog"
+              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300"
+            >
+              Blog
+            </a>
             {links.map((l) => (
               <a
                 key={l}
@@ -45,6 +51,12 @@ export const Navbar = () => {
 
       {open && (
         <div className="md:hidden glass-strong border-t border-border/50 px-4 pb-4 space-y-2">
+          <a
+            href="/blog"
+            className="block py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+          >
+            Blog
+          </a>
           {links.map((l) => (
             <a
               key={l}
