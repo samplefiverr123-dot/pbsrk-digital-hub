@@ -1,5 +1,14 @@
+import coverServices from "@/assets/blog-services.jpg";
+import coverTimelines from "@/assets/blog-timelines.jpg";
+import coverInternational from "@/assets/blog-international.jpg";
+import coverWhyChoose from "@/assets/blog-why-choose.jpg";
+import coverSupport from "@/assets/blog-support.jpg";
+import coverGetStarted from "@/assets/blog-get-started.jpg";
+
 export interface FaqArticle {
   slug: string;
+  cover: string;
+  coverAlt: string;
   question: string;
   answer: string;
   title: string;
