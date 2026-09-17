@@ -1,5 +1,6 @@
 import { MessageCircle, Zap, Users, FolderOpen } from "lucide-react";
-import portrait from "@/assets/pbsrk-portrait.jpg";
+
+const portrait = "/portrait.webp";
 
 
 const stats = [
@@ -37,6 +38,8 @@ export const HeroSection = () => {
               width={144}
               height={144}
               loading="eager"
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-full rounded-full object-cover object-top bg-card" />
           </div>
 
