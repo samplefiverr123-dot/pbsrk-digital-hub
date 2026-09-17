@@ -1,5 +1,6 @@
 import { MessageCircle, Zap, Users, FolderOpen } from "lucide-react";
-import portrait from "@/assets/pbsrk-portrait.jpg";
+
+const portrait = "/portrait.webp";
 
 
 const stats = [
