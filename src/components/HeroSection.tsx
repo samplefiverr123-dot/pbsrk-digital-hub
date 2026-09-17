@@ -1,4 +1,6 @@
 import { MessageCircle, Zap, Users, FolderOpen } from "lucide-react";
+import portrait from "@/assets/pbsrk-portrait.jpg";
+
 
 const stats = [
 { icon: FolderOpen, label: "Projects", value: "20+" },
@@ -29,10 +31,15 @@ export const HeroSection = () => {
           <div className="absolute inset-[-24px] rounded-full bg-primary/10 animate-[ping_2.5s_cubic-bezier(0,0,0.2,1)_infinite]" />
           {/* Core avatar */}
           <div className="relative w-full h-full rounded-full bg-gradient-to-br from-primary to-accent p-[3px] animate-float z-10">
-            <div className="w-full h-full rounded-full bg-card flex items-center justify-center">
-              <span className="font-display font-black text-4xl text-gradient">PB</span>
-            </div>
+            <img
+              src={portrait}
+              alt="PBSRK — AI freelancer from Yanam"
+              width={144}
+              height={144}
+              loading="eager"
+              className="w-full h-full rounded-full object-cover object-top bg-card" />
           </div>
+
         </div>
 
         {/* Badge */}
