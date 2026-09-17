@@ -38,6 +38,8 @@ export const HeroSection = () => {
               width={144}
               height={144}
               loading="eager"
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-full rounded-full object-cover object-top bg-card" />
           </div>
 

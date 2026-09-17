@@ -90,6 +90,8 @@ const FaqArticle = () => {
             alt={article.coverAlt}
             width={1200}
             height={630}
+            loading="lazy"
+            decoding="async"
             className="mt-8 w-full rounded-xl aspect-[1200/630] object-cover"
           />
         </header>
