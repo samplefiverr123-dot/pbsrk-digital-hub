@@ -58,8 +58,8 @@ export const PortfolioSection = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((p, i) => (
-          <ScrollReveal key={p.title} delay={i * 100}>
-            <div className="group glass rounded-2xl overflow-hidden hover:glow-cyan transition-all duration-500 hover:-translate-y-1 h-full">
+          <ScrollReveal key={p.title} delay={i * 50} className="h-full">
+            <div className="group glass rounded-lg overflow-hidden interactive-card h-full">
               <div className="h-44 bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
                 <span className="font-display font-bold text-lg text-primary/40 group-hover:text-primary/70 transition-colors">
                   {p.title.split(" ")[0]}
@@ -89,7 +89,7 @@ export const PortfolioSection = () => (
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Open ${p.title} project demo`}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="h-11 w-11 inline-flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
                   >
                     <ExternalLink className="w-4 h-4" />
                   </a>

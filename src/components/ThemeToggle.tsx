@@ -1,20 +1,19 @@
 import { Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+import { Button } from "@/components/ui/button";
 
 export const ThemeToggle = () => {
-  const [dark, setDark] = useState(true);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", dark);
-  }, [dark]);
+  const { theme, setTheme } = useTheme();
+  const dark = theme !== "light";
 
   return (
-    <button
-      onClick={() => setDark(!dark)}
-      className="p-2 rounded-lg glass hover:glow-cyan transition-all duration-300"
-      aria-label="Toggle theme"
+    <Button variant="ghost" size="icon"
+      onClick={() => setTheme(dark ? "light" : "dark")}
+      className="h-11 w-11 glass text-primary"
+      aria-label={dark ? "Switch to light theme" : "Switch to dark theme"}
+      title={dark ? "Switch to light theme" : "Switch to dark theme"}
     >
       {dark ? <Sun className="w-5 h-5 text-primary" /> : <Moon className="w-5 h-5 text-primary" />}
-    </button>
+    </Button>
   );
 };
