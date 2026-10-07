@@ -28,7 +28,19 @@
     <meta name="theme-color" content="#00e5ff" />
     <meta name="google-site-verification" content="1LQrUEdkPivwICKGc81LWdD4SHPZj4ArOyIloDSLbC0" />
     <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="preload" as="image" href="/portrait.webp" fetchpriority="high" />
+    <script>
+      try {
+        document.documentElement.classList.toggle('dark', localStorage.getItem('pbsrk-theme') !== 'light');
+      } catch (_) {}
+      if (location.pathname === '/') {
+        const portraitPreload = document.createElement('link');
+        portraitPreload.rel = 'preload';
+        portraitPreload.as = 'image';
+        portraitPreload.href = '/portrait.webp';
+        portraitPreload.fetchPriority = 'high';
+        document.head.appendChild(portraitPreload);
+      }
+    </script>
 
     <script type="application/ld+json">
     {

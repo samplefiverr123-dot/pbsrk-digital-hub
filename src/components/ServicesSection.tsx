@@ -22,8 +22,8 @@ export const ServicesSection = () => (
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {innovations.map(({ icon: Icon, title, desc }, i) => (
-          <ScrollReveal key={title} delay={i * 100}>
-            <div className="group glass rounded-2xl p-6 hover:glow-cyan transition-all duration-500 hover:-translate-y-1 cursor-pointer h-full">
+          <ScrollReveal key={title} delay={i * 50} className="h-full">
+            <div className="glass rounded-lg p-6 h-full">
               <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
                 <Icon className="w-6 h-6 text-primary" />
               </div>
@@ -31,9 +31,6 @@ export const ServicesSection = () => (
                 {title}
               </h3>
               <p className="text-sm text-muted-foreground mb-4">{desc}</p>
-              <span className="font-mono text-xs text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                Read Deep Dive →
-              </span>
             </div>
           </ScrollReveal>
         ))}
