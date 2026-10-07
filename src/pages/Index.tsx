@@ -24,10 +24,10 @@ const Index = () => (
     <Navbar />
     <HeroSection />
     <ScrollReveal><AboutSection /></ScrollReveal>
-    <ScrollReveal><ServicesSection /></ScrollReveal>
+    <ServicesSection />
     <ScrollReveal><SkillsSection /></ScrollReveal>
     <ScrollReveal><EducationSection /></ScrollReveal>
-    <ScrollReveal><PortfolioSection /></ScrollReveal>
+    <PortfolioSection />
     <ScrollReveal><TestimonialsSection /></ScrollReveal>
     <ScrollReveal><PricingSection /></ScrollReveal>
     <ScrollReveal><FAQSection /></ScrollReveal>

@@ -6,8 +6,8 @@ export const ScrollReveal = ({ children, className = "", delay = 0 }: { children
   return (
     <div
       ref={ref}
-      className={`transition-all duration-700 ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"} ${className}`}
-      style={{ transitionDelay: `${delay}ms` }}
+      className={`scroll-reveal ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"} ${className}`}
+      style={{ transitionDelay: `${Math.min(delay, 250)}ms` }}
     >
       {children}
     </div>
