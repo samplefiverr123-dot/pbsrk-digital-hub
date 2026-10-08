@@ -1,9 +1,9 @@
 import { createRoot } from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import App from "./App.tsx";
-import "@fontsource-variable/geist/latin.css";
-import "@fontsource-variable/plus-jakarta-sans/latin.css";
-import "@fontsource-variable/jetbrains-mono/latin.css";
+import "@fontsource-variable/geist/wght.css";
+import "@fontsource-variable/plus-jakarta-sans/wght.css";
+import "@fontsource-variable/jetbrains-mono/wght.css";
 import "./index.css";
 
 const root = document.getElementById("root");
