@@ -75,6 +75,8 @@ export const TestimonialsSection = () => {
             <button
               key={i}
               onClick={() => setActive(i)}
+              aria-label={`Show testimonial ${i + 1} of ${testimonials.length}`}
+              aria-current={i === active ? "true" : undefined}
               className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
                 i === active ? "bg-primary w-6" : "bg-muted-foreground/30"
               }`}
