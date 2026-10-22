@@ -61,7 +61,7 @@ export const ContactSection = () => {
               className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-semibold flex items-center justify-center gap-2 hover:scale-105 glow-cyan transition-all duration-300"
             >
               <Send className="w-4 h-4" />
-              {sent ? "Message Sent!" : "Send Message"}
+              {sent ? "Opening WhatsApp..." : "Send Message"}
             </button>
           </form>
 
