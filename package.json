@@ -11,8 +11,8 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "predev": "bun scripts/generate-sitemap.ts",
-    "prebuild": "bun scripts/generate-sitemap.ts"
+    "predev": "npx --yes tsx scripts/generate-sitemap.ts",
+    "prebuild": "npx --yes tsx scripts/generate-sitemap.ts"
   },
   "dependencies": {
     "@fontsource-variable/geist": "^5.3.0",
