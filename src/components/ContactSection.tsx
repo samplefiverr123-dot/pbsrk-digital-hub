@@ -81,11 +81,11 @@ export const ContactSection = () => {
                 <p className="font-mono text-foreground text-sm">BHARAT.LUCKY2010@GMAIL.COM</p>
               </div>
             </a>
-            <a href="https://instagram.com/single_boy_bittu444" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 glass rounded-xl p-4 hover:glow-cyan transition-all duration-300">
+            <a href="https://instagram.com/white.shadow.x444" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 glass rounded-xl p-4 hover:glow-cyan transition-all duration-300">
               <Instagram className="w-5 h-5 text-primary" />
               <div>
                 <p className="text-xs text-muted-foreground">Instagram</p>
-                <p className="font-mono text-foreground">@single_boy_bittu444</p>
+                <p className="font-mono text-foreground">@white.shadow.x444</p>
               </div>
             </a>
           </div>
