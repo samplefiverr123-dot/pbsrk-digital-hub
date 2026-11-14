@@ -1,5 +1,6 @@
 import { Mail, Phone, Instagram, Send } from "lucide-react";
 import { useState, type FormEvent } from "react";
+import { Button } from "@/components/ui/button";
 
 export const ContactSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -10,7 +11,6 @@ export const ContactSection = () => {
     const msg = encodeURIComponent(`Name: ${form.name}\nEmail: ${form.email}\nMessage: ${form.message}`);
     window.open(`https://wa.me/918185967282?text=${msg}`, "_blank");
     setSent(true);
-    setTimeout(() => setSent(false), 3000);
   };
 
   return (
@@ -33,7 +33,10 @@ export const ContactSection = () => {
               aria-label="Your Name"
               required
               value={form.name}
-              onChange={(e) => setForm({ ...form, name: e.target.value })}
+              onChange={(e) => {
+                setForm({ ...form, name: e.target.value });
+                setSent(false);
+              }}
               className="w-full bg-transparent border-b border-border pb-3 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none transition-colors"
             />
             <input
@@ -43,7 +46,10 @@ export const ContactSection = () => {
               aria-label="Your Email"
               required
               value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
+              onChange={(e) => {
+                setForm({ ...form, email: e.target.value });
+                setSent(false);
+              }}
               className="w-full bg-transparent border-b border-border pb-3 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none transition-colors"
             />
             <textarea
@@ -53,16 +59,21 @@ export const ContactSection = () => {
               required
               rows={4}
               value={form.message}
-              onChange={(e) => setForm({ ...form, message: e.target.value })}
+              onChange={(e) => {
+                setForm({ ...form, message: e.target.value });
+                setSent(false);
+              }}
               className="w-full bg-transparent border-b border-border pb-3 text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none transition-colors resize-none"
             />
-            <button
-              type="submit"
-              className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-semibold flex items-center justify-center gap-2 hover:scale-105 glow-cyan transition-all duration-300"
-            >
+            <Button type="submit" className="w-full h-auto min-h-12 py-3 rounded-xl font-semibold hover:scale-105 glow-cyan transition-all duration-300">
               <Send className="w-4 h-4" />
-              {sent ? "Opening WhatsApp..." : "Send Message"}
-            </button>
+              {sent ? "Send it in WhatsApp" : "Continue to WhatsApp"}
+            </Button>
+            <p aria-live="polite" className="text-sm text-muted-foreground">
+              {sent
+                ? "WhatsApp is ready with your message. Tap Send there to deliver it."
+                : "Opens WhatsApp with your message prefilled. You’ll send it there."}
+            </p>
           </form>
 
           {/* Contact Info */}
