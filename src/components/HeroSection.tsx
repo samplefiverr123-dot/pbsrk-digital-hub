@@ -45,10 +45,9 @@ export const HeroSection = () => {
         <h1 className="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] tracking-tight">
           <span className="text-gradient">PBSRK</span>
           <br />
-          <span className="text-foreground">AI Creations That</span>
+          <span className="text-foreground">AI Freelancer in Yanam</span>
           <br />
-          <span className="text-foreground">Actually </span>
-          <span className="text-primary">Deliver</span>
+          <span className="text-primary">Websites, Chatbots &amp; Digital Growth</span>
         </h1>
 
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
