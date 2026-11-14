@@ -12,9 +12,6 @@ export const AboutSection = () => (
           I focus on speed, results, and real value for every client. Whether it's a stunning website,
           an AI chatbot, or a full branding package — I deliver work that actually moves the needle.
         </p>
-        <p className="text-muted-foreground leading-relaxed">
-          <span className="text-primary font-semibold">Technique-learner of Manoj</span> — always evolving, always building, always hustling.
-        </p>
       </div>
     </div>
   </section>
