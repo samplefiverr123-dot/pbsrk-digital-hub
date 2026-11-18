@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { lazy, Suspense } from "react";
 import { ThemeProvider } from "next-themes";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import Index from "./pages/Index.tsx";
 const Answers = lazy(() => import("./pages/Answers.tsx"));
 const Blog = lazy(() => import("./pages/Blog.tsx"));
@@ -31,6 +32,7 @@ const App = () => (
         </Routes>
         </Suspense>
       </BrowserRouter>
+      <SpeedInsights />
     </TooltipProvider>
   </QueryClientProvider>
   </ThemeProvider>
